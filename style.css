@@ -1,0 +1,67 @@
+/* Фон страницы — линейный градиент */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  display: flex;
+  justify-content: center;  /* центровка по горизонтали */
+  align-items: center;      /* центровка по вертикали */
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+/* Строка: минус | результат | плюс */
+.counter-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Окно результата */
+.result {
+  min-width: 120px;
+  padding: 20px 30px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  background-color: red;  /* цвет по умолчанию — для нуля */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+/* Кнопки: радиальное скругление 5px и градиентный фон */
+.btn {
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: radial-gradient(circle at 30% 30%, #6dd5ed, #2193b0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Окно предупреждения под кнопками */
+.warning {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  min-height: 30px;  /* чтобы блок не «прыгал» при появлении текста */
+}
